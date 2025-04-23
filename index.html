@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DetailScribe">
+  <meta name="keywords" content="DetailScribe">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generating Fine Details of Entity Interactions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+<!--  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <style>
+  .publication-authors a .publication-authors a:hover, .publication-authors a:focus, .publication-authors a:visited {color:#333333}
+  .card-body {padding:0;border:none}
+  .card-header {padding-top:4px;padding-bottom:4px}
+  .card-header .btn-link {color:#333333;text-align:left;text-wrap:auto;}
+  .card-header .btn-link:hover, .card-header .btn-link:focus, .card-header .btn-link:visited {color:#333333;cursor:hand;text-decoration:none}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container-fluid is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Generating Fine Details of Entity Interactions</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+<!--              Xinyi Gu<sup>1</sup>,-->
+<!--              <a href="https://jiayuanm.com/">Jiayuan Mao</a><sup>1</sup>-->
+              Anonymous ICCV submission
+            </span>
+          </div>
+
+<!--          <div class="is-size-5 publication-authors">-->
+<!--            <span class="author-block"><sup>1</sup>Massachusetts Institute of Technology</span>-->
+<!--          </div>-->
+
+
+          <div class="column has-text-centered">
+<!--            <div class="publication-links">-->
+<!--              &lt;!&ndash; PDF Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://arxiv.org/pdf/2504.08714"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fas fa-file-pdf"></i>-->
+<!--                  </span>-->
+<!--                  <span>Paper</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; arXiv Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://arxiv.org/abs/2504.08714"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; Code Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://github.com/gxy000/DetailScribe"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-github"></i>-->
+<!--                  </span>-->
+<!--                  <span>Code</span>-->
+<!--                  </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; Dataset Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://www.dropbox.com/scl/fo/wepr3j5kg6fthvj2d8kq9/APysjf2xwRUYWxDG9hyoekw?rlkey=9esh8btznjy6nby0pzbinsxzx&st=f3275099&dl=0"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="far fa-images"></i>-->
+<!--                  </span>-->
+<!--                  <span>Data</span>-->
+<!--                  </a>-->
+<!--                </span>-->
+<!--            </div>-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container-fluid is-max-desktop">
+    <div class="hero-body has-text-centered">
+      <figure>
+        <img src="./static/images/Fig1_1.jpg" alt="DetailScribe-generated image gallery">
+        <figcaption>
+          <strong>Figure 1:</strong> A gallery of InterActing showcasing DetailScribe-generated images with rich entity interactions.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Images not only depict objects but also encapsulate rich interactions between them.
+            However, generating faithful and high-fidelity images involving multiple entities
+            interacting with each other, is a long-standing challenge.
+            While pre-trained text-to-image models are trained on large-scale datasets to
+            follow diverse text instructions, they struggle to generate accurate interactions,
+            likely due to the scarcity of training data for uncommon object interactions.
+          </p>
+          <p>
+            This paper introduces <strong>InterActing</strong>,
+            an interaction-focused dataset with 1000 fine-grained prompts covering three key scenarios:
+            (1) functional and action-based interactions, (2) compositional spatial relationships,
+            and (3) multi-subject interactions.
+          </p>
+          <p>
+            To address interaction generation challenges,
+            we propose a decomposition-augmented refinement procedure.
+            Our approach, <strong>DetailScribe</strong>,
+            built on Stable Diffusion 3.5,
+            leverages LLMs to decompose interactions into finer-grained concepts,
+            uses a VLM to critique generated images,
+            and applies targeted interventions within the diffusion process in refinement.
+            Automatic and human evaluations show significantly improved image quality,
+            demonstrating the potential of enhanced inference strategies.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- InterActing -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">InterActing </h2>
+        <h3 class="title is-4">1000 interaction-focused prompts of three scenarios. </h3>
+        <div class="content has-text-justified">
+          <table border="1" style="border-collapse: collapse; width: 100%;">
+              <thead>
+                <tr>
+                  <th style="width: 25%;"><strong>Scenario</strong></th>
+                  <th style="width: 18%;"><strong>Subclass</strong></th>
+                  <th style="width: 45%;"><strong>Examples</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2"><strong>Functional and<br>Action-Based Interactions (600)</strong></td>
+                  <td>Tool Manipulation (227)</td>
+                  <td>cutting, painting, sailing, stirring, taking a photo</td>
+                </tr>
+                <tr>
+                  <td>Physical Contact (373)</td>
+                  <td>sculpting snow, stacking, holding</td>
+                </tr>
+                <tr>
+                  <td rowspan="2"><strong>Compositional<br>Spatial Relationships (200)</strong></td>
+                  <td>Abstract Layouts (183)</td>
+                  <td>tic-tac-toe, table, atom, solar system, forest, tree, bookshelf</td>
+                </tr>
+                <tr>
+                  <td>Geometric Patterns (17)</td>
+                  <td>zig-zag pattern, circle, center</td>
+                </tr>
+                <tr>
+                  <td><strong>Multi-subject Interactions (200)</strong></td>
+                  <td>Interaction (200)</td>
+                  <td>huddling, high-five, collaborating to lift, weaving leaves together, sharing food</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Table 1:</strong> The InterActing dataset contains 1000 text-to-image prompts. We categorize them into subclass and count the occurrence.</p>
+        </div>
+
+        <h3 class="title is-4">Evaluation Metrics </h3>
+        <div class="content has-text-justified">
+          <p>
+            Due to the challenges in assessing whether an image aligns with the prompt's description,
+            we primarily rely on human evaluation, referred to as the <strong>human Likert scale</strong>.
+            We further explored the use of VLMs and pre-trained metrics for automatic evaluation purposes
+            (<strong>Automatic evaluation.</strong>).
+          </p>
+          <p>
+            We note that these evaluations are inherently more noisy,
+            so we compared their agreement with human preferences on sampled image pairs generated by all models.
+            Overall, VLM evaluator achieves the highest agreement at 90.4%,
+            compared to the other metrics: ImageReward (73.6%),
+            CLIPScore (70.4%), and BLIP-VQA (67.6%).
+          </p>
+          </div>
+      </div>
+    </div>
+    <!--/ InterActing -->
+
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- DetailScribe -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">DetailScribe </h2>
+        <h3 class="title is-4">A refinement-augmented image generation framework utilizing the reasoning ability of LLMs. </h3>
+        <div class="content has-text-justified">
+          <p>
+            DetailScribe operates in three stages:
+          </p>
+          <p>
+            1) given an input natural language prompt,
+            a large language model hierarchically decomposes it into detailed sub-concepts;
+          </p>
+          <p>
+            2) an initial image is generated from the prompt using a text-to-image model,
+            followed by a vision-language model critique conditioned on both the decomposed
+            sub-concepts and the generated image;
+          </p>
+          <p>
+            3) based on the critique, the prompt is refined and a re-denoising process corrects errors,
+            yielding a more faithful and realistic generated image.
+          </p>
+        </div>
+
+        <!--/ Method Figure -->
+        <figure style="margin-bottom: 2em;">
+            <img src="./static/images/Fig2.jpg" alt="DetailScribe-generated image gallery">
+            <figcaption>
+              <strong>Figure 2:</strong> The overall pipeline of DetailScribe.
+            </figcaption>
+          </figure>
+        <figure style="margin-bottom: 2em">
+            <img src="./static/images/Fig3.jpg" alt="DetailScribe-generated image gallery">
+            <figcaption style="margin-top:1em">
+              <strong>Figure 3:</strong> A closer look to the VLM-based critique and prompt refinement.
+              Given the LLM-generated concept decomposition and an image generated using the user input,
+              a vision-language model generates a critique of errors in the image, suggests corrections,
+              and finally refines the prompt. This prompt will be used in a second-round diffusion process.
+            </figcaption>
+          </figure>
+      </div>
+    </div>
+    <!--/ DetailScribe -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- DetailScribe -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Results </h2>
+        <h3 class="title is-4"> Evaluation </h3>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate the models on three scenarios from the <strong>InterActing</strong> dataset and report the results separately.
+            Due to the scalability of high-quality human evaluation,
+            we sampled 50 prompts from <strong>InterActing</strong> for both human evaluation and automatic evaluation,
+            and compared the agreement in between.
+            Table 2 shows the average human/VLM likert scale (1 - 5) and pre-trained metrics on three scenarios of
+            sampled <strong>InterActing</strong> dataset.
+          </p>
+          <p>
+            We report the human Likert scale (Human Evaluation),
+            VLM evaluation score (GPT-4o),
+            as well as ImageReward (ImReward), CLIPScore (CLIPS.) and BLIP-VQA (B-VQA) score.
+
+          </p>
+        </div>
+
+    <!--/ Selected 50. -->
+    <div style="overflow-x: hidden;">
+      <table style="font-size: small; border-collapse: collapse; width: 100%; text-align: center;">
+        <thead>
+          <tr style="border-bottom: 2px solid black;">
+            <th></th>
+            <th colspan="5"><b>Functional Relation</b></th>
+            <th colspan="5"><b>Compositional Relation</b></th>
+            <th colspan="5"><b>Multi-subject Interaction</b></th>
+          </tr>
+          <tr style="border-bottom: 1px solid #aaa;">
+            <th></th>
+            <th>Human</th><th>GPT-4o</th><th>ImReward</th><th>CLIPS.</th><th>B-VQA</th>
+            <th>Human</th><th>GPT-4o</th><th>ImReward</th><th>CLIPS.</th><th>B-VQA</th>
+            <th>Human</th><th>GPT-4o</th><th>ImReward</th><th>CLIPS.</th><th>B-VQA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><b>SD</b></td><td>3.360</td><td>4.680</td><td>1.657</td><td>0.971</td><td>0.366</td><td>3.583</td><td>4.533</td><td>1.415</td><td>0.898</td><td>0.379</td><td>3.225</td><td>4.000</td><td>1.171</td><td>0.894</td><td>0.306</td></tr>
+          <tr><td><b>+ GPT Rewrite</b></td><td>3.770</td><td>4.680</td><td>1.546</td><td>0.921</td><td>0.245</td><td>3.167</td><td>4.533</td><td>1.283</td><td>0.867</td><td>0.325</td><td>3.275</td><td>4.200</td><td>1.101</td><td>0.890</td><td>0.292</td></tr>
+          <tr><td><b>+ GPT Refine</b></td><td>3.450</td><td>4.200</td><td>1.524</td><td>0.951</td><td>0.290</td><td>3.667</td><td>4.867</td><td>1.390</td><td>0.889</td><td>0.389</td><td>3.175</td><td>3.700</td><td>1.022</td><td>0.858</td><td>0.292</td></tr>
+          <tr><td><b>+ Multi-seed</b></td><td>3.270</td><td>4.560</td><td>1.718</td><td>0.985</td><td>0.434</td><td>3.650</td><td>4.733</td><td>1.538</td><td>0.912</td><td>0.423</td><td>3.375</td><td>4.000</td><td>1.149</td><td>0.903</td><td>0.302</td></tr>
+          <tr><td><b>DALL·E 3</b></td><td>3.940</td><td>4.720</td><td>1.535</td><td>0.880</td><td>0.226</td><td>3.433</td><td>4.867</td><td>1.382</td><td>0.838</td><td>0.367</td><td>3.775</td><td><b>4.600</b></td><td>1.111</td><td>0.813</td><td>0.286</td></tr>
+          <tr><td><b>DetailScribe</b></td><td><b>4.280</b></td><td><b>4.960</b></td><td><b>1.761</b></td><td><b>0.998</b></td><td><b>0.449</b></td>
+          <td><b>4.283</b></td><td><b>5.000</b></td><td><b>1.545</b></td><td><b>0.923</b></td><td><b>0.485</b></td>
+          <td><b>3.800</b></td><td>4.400</td><td><b>1.326</b></td><td><b>0.907</b></td><td><b>0.343</b></td>
+          </tr>
+        <tr style="border-top: 2px solid black;">
+        </tbody>
+      </table>
+      <p><strong>Table 2:</strong> <strong>DetailScribe</strong> receives the highest scores according to human preference in all scenarios.</p>
+    </div>
+
+    <h3 class="title is-4"> </h3>
+    <div class="content has-text-justified">
+      <p>
+        According to the above evaluation results, VLM evaluator achieves the highest agreement to human evaluation at 90.4%,
+        compared to the other metrics: ImageReward (73.6%), CLIPScore (70.4%),
+        and BLIP-VQA (67.6%).
+      </p>
+      <p>
+        We further presented the automatic evaluation on the entire <strong>InterActing</strong> in Figure 4.
+      </p>
+    </div>
+
+
+    <!--/ Entire data. -->
+    <figure style="margin-bottom: 2em;">
+        <img src="./static/images/auto_eval_1000.png" alt="Automatic metrics">
+        <figcaption>
+          <strong>Figure 4:</strong> <strong>DetailScribe</strong>
+          outperforms all baselines on all pre-trained metrics.
+        </figcaption>
+    </figure>
+
+        <h3 class="title is-4">Qualitative Comparison</h3>
+<div id="accordion">
+  <!-- Visualization #1 -->
+  <div class="card">
+    <div class="card-header" id="heading1">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+          <strong>"An anime of a hedgehog in a tiny apron, rolling dough with a miniature rolling pin, preparing a berry pie with a cheerful expression."</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/1.jpg" alt="viz_1"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #2 -->
+  <div class="card">
+    <div class="card-header" id="heading2">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+          <strong>“A cat sails across the sea in a large seashell, holding a mast.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/2.jpg" alt="viz_2"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #3 -->
+  <div class="card">
+    <div class="card-header" id="heading3">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+          <strong>“A rabbit carefully sculpts a tiny snow bunny with its paws, adding details like ears and whiskers to the figure.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/3.jpg" alt="viz_3"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #4 -->
+  <div class="card">
+    <div class="card-header" id="heading4">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+          <strong>“An anime of a mouse constructing a tiny castle with blocks, carefully stacking each piece, with tools like a mini hammer and ruler scattered around.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/4.jpg" alt="viz_4"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #5 -->
+  <div class="card">
+    <div class="card-header" id="heading5">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+          <strong>“A zigzag pattern made of scattered autumn leaves, creating a path that alternates left and right as it moves forward.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/5.jpg" alt="viz_5"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #6 -->
+  <div class="card">
+    <div class="card-header" id="heading6">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+          <strong>“A circle of sunflowers with a single, vibrant red rose in the very center, surrounded by the larger yellow blooms."</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/6.jpg" alt="viz_6"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #7 -->
+  <div class="card">
+    <div class="card-header" id="heading7">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+          <strong>“Two birds bring twigs and leaves to a tree branch, weaving them together to create a shared nest.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/7.jpg" alt="viz_7"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #8 -->
+  <div class="card">
+    <div class="card-header" id="heading8">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+          <strong>“Two ants collaborate to lift a large crumb, balancing it carefully as they carry it back to their colony.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/8.jpg" alt="viz_8"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #9 -->
+  <div class="card">
+    <div class="card-header" id="heading9">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+          <strong>“A table formed by pretzels stacked together.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/9.jpg" alt="viz_9"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #10 -->
+  <div class="card">
+    <div class="card-header" id="heading10">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+          <strong>“A tree made of a pretzel stick as the trunk, with green gummy leaves and woolen yarn roots branching out.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/10.jpg" alt="viz_10"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #11 -->
+  <div class="card">
+    <div class="card-header" id="heading11">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+          <strong>“A cat reading books in the cozy library.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/11.jpg" alt="viz_11"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #12 -->
+  <div class="card">
+    <div class="card-header" id="heading12">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+          <strong>“A cat painted a portrait using vibrant watercolors.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/12.jpg" alt="viz_12"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization #13 -->
+  <div class="card">
+    <div class="card-header" id="heading13">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+          <strong>“A crow wearing glasses mixing colorful, glowing potions in tiny vials using its beak in a spooky forest.”</strong>
+        </button>
+      </h5>
+    </div>
+    <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordion">
+      <div class="card-body text-center">
+        <img width="100%" src="./static/images/imageCarousel/13.jpg" alt="viz_13"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    &lt;!&ndash; DetailScribe &ndash;&gt;-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column">-->
+
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <div class="columns is-centered">-->
+<!--    <div class="column">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--      <pre><code>@misc{gu2025generatingfinedetailsentity,-->
+<!--      title={Generating Fine Details of Entity Interactions},-->
+<!--      author={Xinyi Gu and Jiayuan Mao},-->
+<!--      year={2025},-->
+<!--      eprint={2504.08714},-->
+<!--      archivePrefix={arXiv},-->
+<!--      primaryClass={cs.CV},-->
+<!--      url={https://arxiv.org/abs/2504.08714}-->
+<!--      }</code></pre>-->
+<!--    </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Template by <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
