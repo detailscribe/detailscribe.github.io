@@ -70,68 +70,60 @@
           <h1 class="title is-1 publication-title">Generating Fine Details of Entity Interactions</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-<!--              Xinyi Gu<sup>1</sup>,-->
-<!--              <a href="https://jiayuanm.com/">Jiayuan Mao</a><sup>1</sup>-->
-              Anonymous EMNLP submission
+              Xinyi Gu<sup>1</sup>,
+              <a href="https://jiayuanm.com/">Jiayuan Mao</a><sup>1</sup>
+<!--              Anonymous ICCV submission-->
             </span>
           </div>
 
-<!--          <div class="is-size-5 publication-authors">-->
-<!--            <span class="author-block"><sup>1</sup>Massachusetts Institute of Technology</span>-->
-<!--          </div>-->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Massachusetts Institute of Technology</span>
+          </div>
 
 
           <div class="column has-text-centered">
-            <div class="has-text-centered" style="margin-top: 2em;">
-              <a class="button is-medium" href="./static/DetailScribe-main.zip" download>
-                <span class="icon">
-                  <i class="fas fa-file-archive"></i>
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2504.08714"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2504.08714"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/gxy000/DetailScribe"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://www.dropbox.com/scl/fo/wepr3j5kg6fthvj2d8kq9/APysjf2xwRUYWxDG9hyoekw?rlkey=9esh8btznjy6nby0pzbinsxzx&st=f3275099&dl=0"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
                 </span>
-                <span> DetailScribe Code & Data (ZIP)</span>
-              </a>
             </div>
-<!--            <div class="publication-links">-->
-<!--              &lt;!&ndash; PDF Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://arxiv.org/pdf/2504.08714"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fas fa-file-pdf"></i>-->
-<!--                  </span>-->
-<!--                  <span>Paper</span>-->
-<!--                </a>-->
-<!--              </span>-->
-<!--              &lt;!&ndash; arXiv Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://arxiv.org/abs/2504.08714"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="ai ai-arxiv"></i>-->
-<!--                  </span>-->
-<!--                  <span>arXiv</span>-->
-<!--                </a>-->
-<!--              </span>-->
-<!--              &lt;!&ndash; Code Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://github.com/gxy000/DetailScribe"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fab fa-github"></i>-->
-<!--                  </span>-->
-<!--                  <span>Code</span>-->
-<!--                  </a>-->
-<!--              </span>-->
-<!--              &lt;!&ndash; Dataset Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://www.dropbox.com/scl/fo/wepr3j5kg6fthvj2d8kq9/APysjf2xwRUYWxDG9hyoekw?rlkey=9esh8btznjy6nby0pzbinsxzx&st=f3275099&dl=0"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="far fa-images"></i>-->
-<!--                  </span>-->
-<!--                  <span>Data</span>-->
-<!--                  </a>-->
-<!--                </span>-->
-<!--            </div>-->
 
           </div>
         </div>
@@ -171,7 +163,7 @@
           </p>
           <p>
             This paper introduces <strong>InterActing</strong>,
-            an interaction-focused dataset with 1000 fine-grained prompts covering three key scenarios:
+            an interaction-focused dataset with 700 fine-grained prompts covering three key scenarios:
             (1) functional and action-based interactions, (2) compositional spatial relationships,
             and (3) multi-subject interactions.
           </p>
@@ -199,7 +191,7 @@
     <div class="columns is-centered">
       <div class="column">
         <h2 class="title is-3">InterActing </h2>
-        <h3 class="title is-4">1000 interaction-focused prompts of three scenarios. </h3>
+        <h3 class="title is-4">700 interaction-focused prompts of three scenarios. </h3>
         <div class="content has-text-justified">
           <table border="1" style="border-collapse: collapse; width: 100%;">
               <thead>
@@ -211,12 +203,12 @@
               </thead>
               <tbody>
                 <tr>
-                  <td rowspan="2"><strong>Functional and<br>Action-Based Interactions (600)</strong></td>
-                  <td>Tool Manipulation (227)</td>
+                  <td rowspan="2"><strong>Functional and<br>Action-Based Interactions (300)</strong></td>
+                  <td>Tool Manipulation (46)</td>
                   <td>cutting, painting, sailing, stirring, taking a photo</td>
                 </tr>
                 <tr>
-                  <td>Physical Contact (373)</td>
+                  <td>Physical Contact (254)</td>
                   <td>sculpting snow, stacking, holding</td>
                 </tr>
                 <tr>
@@ -235,7 +227,7 @@
                 </tr>
               </tbody>
             </table>
-            <p><strong>Table 1:</strong> The InterActing dataset contains 1000 text-to-image prompts. We categorize them into subclass and count the occurrence.</p>
+            <p><strong>Table 1:</strong> The InterActing dataset contains 700 text-to-image prompts. We categorize them into subclass and count the occurrence.</p>
         </div>
 
         <h3 class="title is-4">Evaluation Metrics </h3>
@@ -249,7 +241,7 @@
           <p>
             We note that these evaluations are inherently more noisy,
             so we compared their agreement with human preferences on sampled image pairs generated by all models.
-            Overall, VLM evaluator achieves the highest agreement at 90.4%,
+            Overall, VLM evaluator achieves the highest agreement at 85.2%,
             compared to the other metrics: ImageReward (73.6%),
             CLIPScore (70.4%), and BLIP-VQA (67.6%).
           </p>
@@ -352,14 +344,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td><b>SD</b></td><td>3.360</td><td>4.680</td><td>1.657</td><td>0.971</td><td>0.366</td><td>3.583</td><td>4.533</td><td>1.415</td><td>0.898</td><td>0.379</td><td>3.225</td><td>4.000</td><td>1.171</td><td>0.894</td><td>0.306</td></tr>
-          <tr><td><b>+ GPT Rewrite</b></td><td>3.770</td><td>4.680</td><td>1.546</td><td>0.921</td><td>0.245</td><td>3.167</td><td>4.533</td><td>1.283</td><td>0.867</td><td>0.325</td><td>3.275</td><td>4.200</td><td>1.101</td><td>0.890</td><td>0.292</td></tr>
-          <tr><td><b>+ GPT Refine</b></td><td>3.450</td><td>4.200</td><td>1.524</td><td>0.951</td><td>0.290</td><td>3.667</td><td>4.867</td><td>1.390</td><td>0.889</td><td>0.389</td><td>3.175</td><td>3.700</td><td>1.022</td><td>0.858</td><td>0.292</td></tr>
-          <tr><td><b>+ Multi-seed</b></td><td>3.270</td><td>4.560</td><td>1.718</td><td>0.985</td><td>0.434</td><td>3.650</td><td>4.733</td><td>1.538</td><td>0.912</td><td>0.423</td><td>3.375</td><td>4.000</td><td>1.149</td><td>0.903</td><td>0.302</td></tr>
-          <tr><td><b>DALL·E 3</b></td><td>3.940</td><td>4.720</td><td>1.535</td><td>0.880</td><td>0.226</td><td>3.433</td><td>4.867</td><td>1.382</td><td>0.838</td><td>0.367</td><td>3.775</td><td><b>4.600</b></td><td>1.111</td><td>0.813</td><td>0.286</td></tr>
+          <tr><td><b>SD</b></td><td>3.360</td><td>4.800</td><td>1.657</td><td>0.971</td><td>0.366</td><td>3.583</td><td>4.867</td><td>1.415</td><td>0.898</td><td>0.379</td><td>3.225</td><td>4.500</td><td>1.171</td><td>0.894</td><td>0.306</td></tr>
+          <tr><td><b>+ GPT Rewrite</b></td><td>3.770</td><td>4.720</td><td>1.546</td><td>0.921</td><td>0.245</td><td>3.167</td><td>4.467</td><td>1.283</td><td>0.867</td><td>0.325</td><td>3.275</td><td>4.600</td><td>1.101</td><td>0.890</td><td>0.292</td></tr>
+          <tr><td><b>+ GPT Refine</b></td><td>3.450</td><td>4.480</td><td>1.524</td><td>0.951</td><td>0.290</td><td>3.667</td><td>4.933</td><td>1.390</td><td>0.889</td><td>0.389</td><td>3.175</td><td>3.800</td><td>1.022</td><td>0.858</td><td>0.292</td></tr>
+          <tr><td><b>+ Multi-seed</b></td><td>3.270</td><td>4.760</td><td>1.718</td><td>0.985</td><td>0.434</td><td>3.650</td><td>4.867</td><td>1.538</td><td>0.912</td><td>0.423</td><td>3.375</td><td>4.400</td><td>1.149</td><td>0.903</td><td>0.302</td></tr>
+          <tr><td><b>DALL·E 3</b></td><td>3.940</td><td>4.760</td><td>1.535</td><td>0.880</td><td>0.226</td><td>3.433</td><td>4.933</td><td>1.382</td><td>0.838</td><td>0.367</td><td>3.775</td><td><b>4.900</b></td><td>1.111</td><td>0.813</td><td>0.286</td></tr>
           <tr><td><b>DetailScribe</b></td><td><b>4.280</b></td><td><b>4.960</b></td><td><b>1.761</b></td><td><b>0.998</b></td><td><b>0.449</b></td>
           <td><b>4.283</b></td><td><b>5.000</b></td><td><b>1.545</b></td><td><b>0.923</b></td><td><b>0.485</b></td>
-          <td><b>3.800</b></td><td>4.400</td><td><b>1.326</b></td><td><b>0.907</b></td><td><b>0.343</b></td>
+          <td><b>3.800</b></td><td>4.800</td><td><b>1.326</b></td><td><b>0.907</b></td><td><b>0.343</b></td>
           </tr>
         <tr style="border-top: 2px solid black;">
         </tbody>
@@ -370,7 +362,7 @@
     <h3 class="title is-4"> </h3>
     <div class="content has-text-justified">
       <p>
-        According to the above evaluation results, VLM evaluator achieves the highest agreement to human evaluation at 90.4%,
+        According to the above evaluation results, VLM evaluator achieves the highest agreement to human evaluation at 85.2%,
         compared to the other metrics: ImageReward (73.6%), CLIPScore (70.4%),
         and BLIP-VQA (67.6%).
       </p>
@@ -382,7 +374,7 @@
 
     <!--/ Entire data. -->
     <figure style="margin-bottom: 2em;">
-        <img src="./static/images/auto_eval_1000.png" alt="Automatic metrics">
+        <img src="./static/images/auto_eval_600.png" alt="Automatic metrics">
         <figcaption>
           <strong>Figure 4:</strong> <strong>DetailScribe</strong>
           outperforms all baselines on all pre-trained metrics.
@@ -619,24 +611,24 @@
 <!--</section>-->
 
 
-<!--<section class="section" id="BibTeX">-->
-<!--  <div class="container is-max-desktop content">-->
-<!--    <div class="columns is-centered">-->
-<!--    <div class="column">-->
-<!--    <h2 class="title">BibTeX</h2>-->
-<!--      <pre><code>@misc{gu2025generatingfinedetailsentity,-->
-<!--      title={Generating Fine Details of Entity Interactions},-->
-<!--      author={Xinyi Gu and Jiayuan Mao},-->
-<!--      year={2025},-->
-<!--      eprint={2504.08714},-->
-<!--      archivePrefix={arXiv},-->
-<!--      primaryClass={cs.CV},-->
-<!--      url={https://arxiv.org/abs/2504.08714}-->
-<!--      }</code></pre>-->
-<!--    </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered">
+    <div class="column">
+    <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{gu2025generatingfinedetailsentity,
+      title={Generating Fine Details of Entity Interactions},
+      author={Xinyi Gu and Jiayuan Mao},
+      year={2025},
+      eprint={2504.08714},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2504.08714}
+      }</code></pre>
+    </div>
+    </div>
+  </div>
+</section>
 
 
 <footer class="footer">
